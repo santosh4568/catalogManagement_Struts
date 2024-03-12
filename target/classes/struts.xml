@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+
+        <!-- Create Book -->
+        <action name="create" class="action.Create" method="addBook">
+            <result name="SUCCESS">/display.jsp</result>
+            <result name="ERROR">/index.jsp</result>
+        </action>
+
+        <!-- Update Book -->
+        <action name="update" class="action.Update" method="updateBook">
+            <result name="SUCCESS">/display.jsp</result>
+            <result name="ERROR">/index.jsp</result>
+        </action>
+
+        <!-- Delete Book -->
+        <action name="delete" class="action.Delete" method="deleteBook">
+            <result name="SUCCESS">/display.jsp</result>
+            <result name="ERROR">/index.jsp</result>
+        </action>
+
+        <!-- Search Book -->
+        <action name="search" class="action.Search" method="searchBook">
+            <result name="SUCCESS">/index.jsp</result>
+            <result name="ERROR">/index.jsp</result>
+        </action>
+    </package>
+</struts>
